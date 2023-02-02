@@ -1,0 +1,56 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+.ui-icon-listreportbtn {
+  background-image: url('../images/listreport.png') !important;
+}
+
+#birtresourcedirectory, #reporttemplatedirectory {
+  width: 400px;
+}
+
+#birtlogrollingsize, #birtlogmaxbackupindex, #viewingsessiontimeout {
+  width: 60px;
+}
+
+#birtlogdirectoryname, #logdirectoryname, #rptdocumentdirectoryname, #reportdirectoryname, #imagedirectoryname, #exportdirectoryname,
+ #rptdocumentsubdirectoryprefix, #reportsubdirectoryprefix, #imagesubdirectoryprefix, #exportsubdirectoryprefix {
+  width: 150px;
+}
+
+
+#birtparameters {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-style: none;
+  #border: #FFFF00 2px;
+}
+
+#applicationparameters {
+  display: inline-block;
+  color: black;
+  background-color: white;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border-color:white;
+  border-style: none;
+}
+
+legend {
+  background-color: grey;
+}
+
+.rightalign {
+	text-align: right;
+}
+
+.buttonpointer {
+	cursor: pointer;
+}

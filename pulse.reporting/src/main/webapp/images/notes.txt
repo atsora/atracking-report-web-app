@@ -1,0 +1,15 @@
+téléchargement des svg: https://www.iconfinder.com/iconsets/font-awesome
+taille de icônes : 128 x 128
+format : png
+
+# Thème clair
+gris  foncé : 444444              rgb(68, 68, 68)
+rouge foncé : c93232 (_enabled)   rgb(201, 50, 50)
+vert  foncé : 2e9719 (_enabled)   rgb(46, 151, 25)
+bleu  foncé : 2973b7 (_enabled)   rgb(41, 115, 183)
+
+# Thème sombre
+gris  clair : dedede (_dark)            rgb(222, 222, 222)
+rouge clair : f95252 (_enabled_dark)    rgb(249, 82, 82)
+vert  clair : 4ec536 (_enabled_dark)    rgb(78, 197, 54)
+bleu  clair : 99c9ff (_enabled_dark)    rgb(153, 201, 255)

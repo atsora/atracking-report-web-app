@@ -1,0 +1,276 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+#thumbnail {
+  float: right;
+  max-width: 300px;
+  max-height: 200px;
+  border: 1px solid #dddddd;
+}
+
+#reportdescription {
+  width: 100%;
+  overflow: hidden;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.report-description {
+  width: auto;
+  overflow: hidden;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+/* Markdown display */
+#reportdescription h1 {
+  color: #c93232;
+  font-size: initial;
+  margin: 0 0 10px 0;
+}
+
+#reportdescription .tile-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#reportparameters {
+  width: 66%;
+}
+
+#reportparameters .tile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#reportactions {
+  width: 34%;
+}
+
+#reportactions .tile-content {
+  position: relative;
+}
+
+#reportfavorites {
+  width: 100%;
+}
+
+.favorite {
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.favorite-description {
+  float: left;
+}
+
+.favorite-reportname {
+  font-style: italic;
+  font-size: 12px;
+  color: #888;
+}
+
+.favorite-actions {
+  float: right;
+}
+
+.favorite-actions button {
+  cursor: pointer;
+  margin: .5em .4em .5em 0;
+}
+
+#left-actions {
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #c2c0b9;
+}
+
+#left-action-list,
+#left-action-favorites {
+  cursor: pointer;
+  width: 50%;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  margin-top: 3px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+#tree {
+  overflow-x: hidden;
+  font-size: 10pt;
+}
+
+#tree ul ul {
+  padding: 0;
+  box-shadow: inset 0px 7px 10px -12px #000, inset 0px -7px 10px -12px #000;
+}
+
+#tree ul {
+  padding: 0;
+  margin: 0;
+}
+
+#tree>ul {
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #FFF;
+}
+
+#tree span {
+  display: block;
+  cursor: pointer;
+}
+
+#tree ul span {
+  padding: 5px 10px;
+  margin: 0;
+  color: #444;
+}
+
+#tree li.active span,
+#left-favorites .enabled {
+  color: #c93232 !important;
+  padding: 5px 10px 5px 6px;
+  border-left: 4px solid #c93232;
+  font-weight: bold;
+}
+
+#tree>ul>li>span {
+  background-color: #ebe9e3;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #c2c0b9;
+  font-weight: bold;
+  padding: 15px 10px;
+  color: #222;
+}
+
+#tree>ul>li>span:hover {
+  background-color: #dbd9d3;
+}
+
+#left-action-favorites {
+  background-image: url('../images/star.png');
+}
+
+#left-action-favorites.enabled {
+  background-image: url('../images/star_enabled.png');
+  cursor: default;
+}
+
+#left-action-list {
+  background-image: url('../images/list.png');
+}
+
+#left-action-list.enabled {
+  background-image: url('../images/list_enabled.png');
+  cursor: default;
+}
+
+#left-favorites {
+  background-color: #ffffff;
+  box-shadow: inset 0px 7px 10px -12px #000, inset 0px -7px 10px -12px #000;
+}
+
+.left-favorite {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 10pt;
+}
+
+.editfavorite,
+.viewfavorite,
+.deletefavorite {
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+  width: 36px;
+  height: 36px;
+  margin: 0 10px;
+}
+
+.editfavorite {
+  background-image: url('../images/parameter.png');
+}
+
+.viewfavorite {
+  background-image: url('../images/eye.png');
+}
+
+.deletefavorite {
+  background-image: url('../images/trash.png');
+}
+
+.editfavorite:disabled {
+  background-image: url('../images/parameter_dark.png');
+  cursor: default;
+}
+
+.viewfavorite:disabled {
+  background-image: url('../images/eye_dark.png');
+  cursor: default;
+}
+
+.deletefavorite:disabled {
+  background-image: url('../images/trash_dark.png');
+  cursor: default;
+}
+
+.editfavorite:hover:enabled {
+  background-image: url('../images/parameter_enabled.png');
+}
+
+.viewfavorite:hover:enabled {
+  background-image: url('../images/eye_enabled.png');
+}
+
+.deletefavorite:hover:enabled {
+  background-image: url('../images/trash_enabled.png');
+}
+
+#configurationbtn {
+  background-image: url('../images/configuration.png');
+}
+
+#viewbtn .button1-text {
+  background-image: url('../images/eye.png');
+}
+
+#viewbtn .button1-icon {
+  background-image: url('../images/eye_enabled.png');
+}
+
+#addfavoritebtn .button1-text,
+#updatefavoritebtn .button1-text {
+  background-image: url('../images/star.png');
+}
+
+#addfavoritebtn .button1-icon,
+#updatefavoritebtn .button1-icon {
+  background-image: url('../images/star_enabled.png');
+}
+
+/* Small screen adaptation */
+@media (max-width: 980px) {
+  #reportactions {
+    width: 100%;
+  }
+
+  #reportparameters {
+    width: 100%;
+  }
+}
+
+#addfavoritedialogbox {
+  margin: 10px;
+}
+
+#tree .visible_false {
+  display: none;
+}

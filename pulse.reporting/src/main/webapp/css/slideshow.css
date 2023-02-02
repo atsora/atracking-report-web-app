@@ -1,0 +1,24 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+#stop-slideshow {
+  display: block;
+}
+#leftpanel { display: none; }
+#header {
+  display: none;
+  height: 0 !important;
+}
+#inner {
+  top: 0 !important;
+}
+#mainarea {
+  left: 0 !important;
+  padding: 0;
+}
+.tile { margin: 0; box-shadow: none; }
+body { background-image: none; background-color: #fff; }
+.ui-dialog, .ui-widget-overlay, .header-pagination { display: none !important; }

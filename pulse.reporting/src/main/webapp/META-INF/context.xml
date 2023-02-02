@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/pulsereporting${pulse.reporting.version.suffix}">
+  <Resource
+    name="jdbc/lemoine"
+    auth="Container"
+    driverClassName="org.postgresql.Driver"
+    maxActive="40"
+    maxIdle="-1"
+    maxWait="-1"
+    type="javax.sql.DataSource"
+    url="jdbc:postgresql://databaseserver/DatabaseName?autoReconnect=true"
+    validationQuery="select 1"
+    testOnBorrow="true"
+    username="reporting"
+    password="DatabasePassword"/>
+</Context>

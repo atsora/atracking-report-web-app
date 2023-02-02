@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ReportWebApp">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulse.emitters/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulse.report.functions/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulse.report.functions/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulse.reporting/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulse.reporting/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/pulsereportsextensions/src"/>
+        <property name="context-root" value="ReportWebApp"/>
+        <property name="java-output-path" value="/ReportWebApp/bin"/>
+    </wb-module>
+</project-modules>

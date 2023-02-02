@@ -1,0 +1,315 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+/* General styles */
+body {
+  color: #dfdfdf;
+  background-image: url('../images/background-dark.png');
+}
+.title, .ui-dialog-title {
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"], input[type="number"], select, .ui-datepicker {
+  border-color: #444;
+  color: #000;
+  background-color: #dfdfdf;
+}
+input[type="text"]:disabled, input[type="number"]:disabled, select:disabled {
+  color: #666;
+}
+
+/* Header & dropdown menu */
+
+#header {
+  background: #303030; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#393939, #303030); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#393939, #303030); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#393939, #303030); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#393939, #303030); /* Standard syntax */
+  border-bottom: 1px solid #292929;  
+  /* color: rgba(255, 255, 255, 0.8);  /* adapted to background */
+  color: #DFDFDF;
+}
+#header-logo {
+  background-image: url('../images/Ltech-dark.svg');
+}
+.title {
+  color: rgba(255, 255, 255, 0.8); /* Same as header - Mandatory */
+}
+#header .ui-button:hover, .header-menu-item:hover {
+  background-color: #404040 !important;
+}
+.logindisplay-content{
+  display: inline-block !important;
+  /*
+  color: rgba(255, 255, 255, 0.8); /* Same as header - Mandatory */
+}
+.logindisplay-icon{
+  background-image: url('../images/logindisplay-sign-out_dark.svg') !important; 
+}
+#help-icon { 
+  background-image: url('../images/question-solid_dark.svg'); 
+}
+/*
+#header-left {
+  border-right: 1px solid #222;
+}
+#header-right {
+  border-left: 1px solid #222;
+}
+*/
+
+.helpParameter-button {
+  background-image: url('../images/help_parameter_dark.svg');
+}
+.helpParameter-button:hover {
+  background-image: url('../images/help_parameter_enabled_dark.svg');
+}
+
+.dropdown-button {
+  background-image: url('../images/menu.png');
+}
+.dropdown-content, .ui-dialog {
+  background-color: #393939;
+  border: 1px solid #292929;
+}
+.dropdown-content:before {
+  border-bottom-color: #292929;
+}
+.dropdown-content:after {
+  border-bottom-color: #393939;
+}
+.header-menu-separator, #left-actions {
+  border-bottom: 1px solid #222;
+}
+
+/* Left panel */
+
+#leftpanel {
+  background-color: #393939;
+  color: #dfdfdf;
+}
+#tree > ul {
+  border-bottom: 1px solid #555;
+  background-color: #333;
+}
+#tree ul span { color: #bbb; }
+#tree li.active span, #left-favorites .enabled {
+  color: #f95252;
+  border-left: 4px solid #f95252;
+}
+#tree > ul > li > span {
+  background-color: #393939;
+  color: #dfdfdf;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #222;
+}
+#tree > ul > li > span:hover { background-color: #404040; }
+#tree > ul > li > span { color: #dfdfdf; }
+
+#tableofcontenttitle {
+  color: #000;
+  background-color: #999;
+}
+#left-favorites {
+  background-color: #333;
+}
+/* Main area */
+
+.tile {
+  background-color: #393939;
+}
+
+.tile-title, .ui-dialog-titlebar {
+  border-bottom: 1px solid #292929;
+  background-color: #303030;
+}
+
+.button1 {
+  background: #b4b4b4;
+  background: -moz-linear-gradient(top, #c4c4c4 0%, #b4b4b4 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c4c4c4), color-stop(100%, #b4b4b4));
+  background: -webkit-linear-gradient(top, #c4c4c4 0%, #b4b4b4 100%);
+  background: -o-linear-gradient(top, #c4c4c4 0%, #b4b4b4 100%);
+  background: -ms-linear-gradient(top, #c4c4c4 0%, #b4b4b4 100%);
+  background: linear-gradient(to bottom, #c4c4c4 0%, #b4b4b4 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c4c4c4', endColorstr='#b4b4b4', GradientType=0);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(2, 2, 2, 0.8);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(2, 2, 2, 0.8);
+  box-shadow: 0px 1px 3px 0px rgba(2, 2, 2, 0.8);
+}
+.button1:hover {
+  color: #f95252;
+}
+#viewbtn .button1-text { background-image: url('../images/eye.png'); }
+#viewbtn .button1-icon { background-image: url('../images/eye_enabled_dark.png'); }
+#addfavoritebtn .button1-text, #updatefavoritebtn .button1-text { background-image: url('../images/star.png'); }
+#addfavoritebtn .button1-icon, #updatefavoritebtn .button1-icon { background-image: url('../images/star_enabled_dark.png'); }
+#parameterbtn, #parameterbtn2 { background-image: url('../images/parameter_dark.png'); }
+#parameterbtn .button2-icon { background-image: url('../images/parameter_enabled_dark.png'); }
+#exportbtn, #exportbtn2 { background-image: url('../images/export_dark.png'); }
+#exportbtn .button2-icon { background-image: url('../images/export_enabled_dark.png'); }
+#refreshviewbtn, #refreshviewbtn2 { background-image: url('../images/refresh_dark.png'); }
+#refreshviewbtn .button2-icon { background-image: url('../images/refresh_enabled_dark.png'); }
+#printbtn, #printbtn2 { background-image: url('../images/print_dark.png'); }
+#printbtn .button2-icon { background-image: url('../images/print_enabled_dark.png'); }
+#stop-slideshowbtn .button2-icon { background-image: url('../images/stop_slideshow_enabled_dark.png'); }
+#slideshowbtn, #slideshowbtn2 { background-image: url('../images/slideshow_dark.png'); }
+#left-action-favorites { background-image: url('../images/star_dark.png'); }
+#left-action-favorites.enabled { background-image: url('../images/star_enabled_dark.png'); }
+#left-action-list { background-image: url('../images/list_dark.png'); }
+#left-action-list.enabled { background-image: url('../images/list_enabled_dark.png'); }
+.editfavorite:hover:enabled { background-image: url('../images/parameter_enabled_dark.png'); }
+.viewfavorite:hover:enabled { background-image: url('../images/eye_enabled_dark.png'); }
+.deletefavorite:hover:enabled { background-image: url('../images/trash_enabled_dark.png'); }
+#menubtn { background-image: url('../images/menu_enabled_dark.png'); }
+#menubtn .button2-icon { background-image: url('../images/menu_enabled_dark.png'); }
+#menubtn.disabled { background-image: url('../images/menu_dark.png'); }
+#menubtn.disabled .button2-icon { background-image: url('../images/menu_dark.png'); }
+#actionbtn.dropdown-content-shown { background-image: url('../images/actions_enabled_dark.png'); }
+#actionbtn.dropdown-content-shown .button2-icon { background-image: url('../images/actions_enabled_dark.png'); }
+#actionbtn { background-image: url('../images/actions_dark.png'); }
+#actionbtn .button2-icon { background-image: url('../images/actions_dark.png'); }
+#configurationbtn { background-image: url('../images/configuration_dark.png'); }
+
+#reportdescription h1 { color: #f95252; }
+
+.ui-datepicker th, .ui-datepicker td { color: #000; }
+.header-pagination input {
+  background-color: transparent;
+  color: #dfdfdf;
+}
+
+.ui-state-default {
+  background-color: #bbb;
+  border: 1px solid #aaa;
+}
+.ui-slider {
+  border: 1px solid #bbb;
+}
+.favorite-reportname {
+  color: #999;
+}
+
+a.ui-state-active { background-color: #999; }
+
+#leftpanel-toggle {
+  background-image: url("../images/hide-panel_dark.png");
+}
+.leftpanel-collapsed #leftpanel-toggle {
+  background-image: url("../images/show-panel_dark.png") !important;
+}
+
+/* Custom widgets */
+.customDialogWindow { background-color: #393939; }
+.customDialogHeader {
+  border-bottom: 1px solid #292929;
+  background-color: #303030;
+}
+.customDialogTitle {
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67);
+  color: rgba(255, 255, 255, 0.8);
+}
+.customDialogButtons { border-top: 1px solid #292929; }
+.customDialogCloseBox { background-image: url('../images/close_dark.png'); }
+.customDialogCancel { background-image: url('../images/cancel_dark.png'); }
+.customDialogCancel .button2-icon { background-image: url('../images/cancel_enabled_dark.png'); }
+.customDialogPrevious { background-image: url('../images/previous_dark.png'); }
+.customDialogPrevious .button2-icon { background-image: url('../images/previous_dark.png'); }
+.customDialogNext { background-image: url('../images/next_dark.png'); }
+.customDialogNext .button2-icon { background-image: url('../images/next_dark.png'); }
+.customDialogOk { background-image: url('../images/ok_dark.png'); }
+.customDialogOk .button2-icon { background-image: url('../images/ok_enabled_dark.png'); }
+.customProgressBar { background-color: #f95252; }
+.customDialogIconInformation { background-image: url('../images/information_dark.png'); }
+.customDialogIconWarning { background-image: url('../images/warning_dark.png'); }
+.customDialogIconError { background-image: url('../images/error_dark.png'); }
+.customDialogIconQuestion { background-image: url('../images/question_dark.png'); }
+#tableofcontenttree .tocexpandable { background-image: url('../images/collapsed_dark.png'); }
+#tableofcontenttree .tocexpanded { background-image: url('../images/expanded_dark.png'); }
+#homebtn { background-image: url('../images/home_dark.png'); }
+#homebtn .button2-icon { background-image: url('../images/home_enabled_dark.png'); }
+
+
+/* Machine selection */
+
+.machineSelectionDialogMachineList {
+  border: 1px solid #222;
+  background-color: #333;
+}
+.machineSelectionDialogCategoryList > ul,
+.machineSelectionDialogMachineList > ul { background-color: #333; }
+.machineSelectionDialogCategoryList > ul {
+  border: 1px solid #222;
+  border-bottom: 1px solid #555;
+}
+.machineSelectionDialogCategoryList ul > li > ul > li span,
+.machineSelectionDialogMachineList ul > li label { color: #dfdfdf; }
+.machineSelectionDialogCategoryList ul > li > span {
+  background-color: #393939;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #222;
+  color: #dfdfdf;
+}
+.machineSelectionDialogCategoryList ul > li > span:hover { background-color: #404040; }
+.machineSelectionDialogCategoryList input:checked + span {
+   border-left: 4px solid #f95252;
+   color: #f95252 !important;
+}
+.machineSelectionDialogButton { background-image: url('../images/edit_dark.png'); }
+.machineSelectionDialogButton .button2-icon { background-image: url('../images/edit_enabled_dark.png'); }
+.machineSelectionDialogClearSearch { background-image: url('../images/cancel_dark.png'); }
+.machineSelectionDialogClearSearch .button2-icon { background-image: url('../images/cancel_enabled_dark.png'); }
+
+.parametererrormsg, .parametergrouperrormsg {
+	color: #f95252;
+}
+.machineSelectionDialog {
+  border: 1px solid #222;
+}
+.machineSelectionDialogSearch {
+  border: 1px solid #222;
+}
+.machineSelectionDialogSearchInput
+{
+  background-color: transparent !important;
+  color: #dfdfdf !important;
+}
+
+/* Accordion selection */
+
+.accordionSelectionDialogButton { background-image: url('../images/edit_dark.png'); }
+.accordionSelectionDialogButton .button2-icon { background-image: url('../images/edit_enabled_dark.png'); }
+.accordionSelectionDialogClearSearch { background-image: url('../images/cancel_dark.png'); }
+.accordionSelectionDialogClearSearch .button2-icon { background-image: url('../images/cancel_enabled_dark.png'); }
+.accordionSelectionDialogElementList {
+  border: 1px solid #222;
+  background-color: #333;
+}
+.customAccordionFirstLevel ul > li label {
+  color: #dfdfdf;
+}
+.customAccordionFirstLevel > div > span {
+  background-color: #393939;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #222;
+  color: #dfdfdf;
+}
+.customAccordionFirstLevel > div > span:hover { background-color: #404040; }
+.customAccordionFirstLevel ul { background-color: #333; }
+.customAccordionFirstLevel ul li input:checked + span {
+  border-left: 4px solid #f95252;
+  color: #f95252 !important;
+}
+
+.slider { background-color: #777; }
+input:checked + .slider { background-color: #4ec536; }
+
+.parameterGroupContent {
+  border-left: 2px solid #dfdfdf;
+}

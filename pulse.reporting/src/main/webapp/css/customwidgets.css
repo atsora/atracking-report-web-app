@@ -1,0 +1,305 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+/*###########
+## DIALOGS ##
+###########*/
+
+/**********
+ Structure
+**********/
+
+.customDialog {
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+}
+.customDialogEnabled { display: block; }
+
+.customDialogShadow {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.customDialogWindow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 50%;
+  min-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+
+@media (max-width: 685px) {
+  .customDialogWindow {
+    min-width: 0;
+    width: 100%;
+    border: none;
+  }
+  .customDialogWindowFullScreenOnSmartphone {
+    transform: none;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .customDialogWindowFullScreenOnSmartphone .customDialogContent {
+    position: absolute;
+    top: 31px;
+    bottom: 0;
+    width: 100%;
+  }
+  .customDialogWindowFullScreenOnSmartphone .customDialogContent > div {
+    max-height: none !important;
+    height: 100% !important;
+  }
+}
+
+.customDialogHeader {
+  border-bottom: 1px solid #ddd;
+  background-color: #ebe9e3;
+  position: relative;
+}
+
+.customDialogTitle {
+  padding: 5px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 4px 6px #EEE, 0 0 0 #000, 1px 4px 6px #EEE;
+  color: rgba(20, 20, 20, 0.5);
+  margin-right: 35px;
+}
+
+.customDialogCloseBox {
+  right: 0;
+  height: 100%;
+  width: 35px;
+  position: absolute;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/close.png');
+  cursor: pointer;
+}
+
+.customDialogContent {
+  margin-bottom: 39px;
+  overflow: hidden;
+}
+
+.customDialogContent > div {
+  overflow: auto;
+  position: relative;
+}
+
+.customDialogButtons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  height: 39px;
+  text-align: center;
+}
+
+.customDialogButtons > button {
+  width: 50%;
+  margin: 5px 0;
+}
+
+.customDialogIcon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.customDialogMessage {
+  margin-left: 90px;
+  min-height: 80px;
+  padding-top: 5px;
+}
+
+.customDialogIconInformation { background-image: url('../images/information.png'); }
+.customDialogIconWarning { background-image: url('../images/warning.png'); }
+.customDialogIconError { background-image: url('../images/error.png'); }
+.customDialogIconQuestion { background-image: url('../images/question.png'); }
+
+/***********
+ Navigation 
+***********/
+
+.customDialogCancel { background-image: url('../images/cancel.png'); }
+.customDialogCancel .button2-icon { background-image: url('../images/cancel_enabled.png'); }
+.customDialogPrevious { background-image: url('../images/previous.png'); }
+.customDialogPrevious .button2-icon { background-image: url('../images/previous.png'); }
+.customDialogNext { background-image: url('../images/next.png'); }
+.customDialogNext .button2-icon { background-image: url('../images/next.png'); }
+.customDialogOk { background-image: url('../images/ok.png'); }
+.customDialogOk .button2-icon { background-image: url('../images/ok_enabled.png'); }
+
+@media (max-width: 685px) {
+  /* multipage on */
+  .customDialogCancel { display: none; }
+  .customDialogPrevious { display: inline-block; }
+  .customDialogFirstPage .customDialogCancel { display: inline-block; }
+  .customDialogFirstPage .customDialogPrevious { display: none; }
+  .customDialogNext { display: inline-block; }
+  .customDialogOk { display: none; }
+  .customDialogLastPage .customDialogNext { display: none; }
+  .customDialogLastPage .customDialogOk { display: inline-block; }
+  .customDialogContent > div { display: none; width: 100% !important; }
+  div.customDialogCurrentPage { display: block; }
+}
+@media (min-width: 686px) {
+  /* multipage off */
+  .customDialogPrevious, .customDialogNext { display: none; }
+  .customDialogCancel, .customDialogOk { display: inline-block; }
+  .customDialogContent > div { float: left; }
+}
+
+/* force multipage on */
+.customDialogMultiPageOn .customDialogCancel { display: none; }
+.customDialogMultiPageOn .customDialogPrevious { display: inline-block; }
+.customDialogMultiPageOn.customDialogFirstPage .customDialogCancel { display: inline-block; }
+.customDialogMultiPageOn.customDialogFirstPage .customDialogPrevious { display: none; }
+.customDialogMultiPageOn .customDialogNext { display: inline-block; }
+.customDialogMultiPageOn .customDialogOk { display: none; }
+.customDialogMultiPageOn.customDialogLastPage .customDialogNext { display: none; }
+.customDialogMultiPageOn.customDialogLastPage .customDialogOk { display: inline-block; }
+.customDialogMultiPageOn .customDialogContent > div { display: none; }
+.customDialogMultiPageOn div.customDialogCurrentPage { display: block; }
+
+/* force multipage off */
+.customDialogMultiPageOff .customDialogPrevious, .customDialogMultiPageOff .customDialogNext { display: none; }
+.customDialogMultiPageOff .customDialogCancel, .customDialogMultiPageOff .customDialogOk { display: inline-block; }
+.customDialogMultiPageOff .customDialogContent > div { display: block; }
+
+/* hide buttons */
+.customDialogNoCancel .customDialogCancel,
+.customDialogNoPrevious .customDialogPrevious,
+.customDialogNoNext .customDialogNext,
+.customDialogNoOk .customDialogOk { display: none; }
+.customDialogNoCancel.customDialogNoPrevious.customDialogNoNext.customDialogNoOk .customDialogButtons { display: none; }
+.customDialogNoCancel.customDialogNoPrevious.customDialogNoNext.customDialogNoOk .customDialogContent { margin-bottom: 0; }
+
+/*###########################
+## RIGHT BUTTON FOR LOADER ##
+###########################*/
+
+.customDialogButtonRight .customDialogContent {
+  margin-bottom: 0;
+  margin-right: 60px;
+}
+.customDialogButtonRight.customDialogNoCancel  .customDialogContent { margin-right: 0; }
+.customDialogButtonRight .customDialogButtons {
+  width: 50px;
+  border-top: none;
+  right: 15px;
+}
+.customDialogButtonRight .customDialogButtons > button {
+  margin: 0;
+}
+
+/*#########################
+## PRECONFIGURED DIALOGS ##
+#########################*/
+
+.customDialogIcon {
+  margin: 15px;
+}
+.customDialogMessage {
+  margin-right: 15px;
+}
+
+
+/*#################
+## PROGRESS BARS ##
+#################*/
+
+.customProgress {
+  height: 10px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  background-image: linear-gradient(to bottom,#ebebeb 0%,#f5f5f5 100%);
+  background-repeat: repeat-x;
+}
+.customProgressBar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+  background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);
+  background-size: 40px 40px;
+  background-repeat: repeat-x;
+  float: left;
+  height: 100%;
+  background-color: #c93232;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+@keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+/*###############
+## IMAGE POPUP ##
+###############*/
+
+.customImagePopup {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s ease;
+}
+.customImagePopupEnabled {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.customImagePopupShadow {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.customImagePopupWindow  { 
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.customImagePopup img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

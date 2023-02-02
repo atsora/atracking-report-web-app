@@ -1,0 +1,12 @@
+*.msi
+*.bak
+.vs
+pulse.emitters/target
+pulse.report.functions/target
+pulse.reporting/target
+pulse.reporting/Installer/**/bin
+pulse.reporting/Installer/**/obj
+PulseTomcat/Installer/**/bin
+PulseTomcat/Installer/**/obj
+PulseTomcat/apache-tomcat-*.zip
+/WebContent

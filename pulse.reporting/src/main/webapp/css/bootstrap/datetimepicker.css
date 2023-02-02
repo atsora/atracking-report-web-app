@@ -1,0 +1,40 @@
+/*
+ * Copyright (C) 2009-2023 Lemoine Automation Technologies
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.datepicker-days .table-condensed thead tr:nth-child(2) th {
+  padding-top: 10px;
+}
+
+.datepicker-years, .datepicker-months, .datepicker-decades{
+  width: 270px;
+}
+
+.timepicker-picker .table-condensed,
+.timepicker-hours .table-condensed,
+.timepicker-minutes .table-condensed {
+  margin: auto;
+}
+.timepicker-hour, .timepicker-minute {
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.timepicker-minutes td, .timepicker-hours td {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.timepicker-picker a, .timepicker-picker span {
+  display: block;
+}
+
