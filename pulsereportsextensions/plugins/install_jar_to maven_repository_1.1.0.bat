@@ -1,1 +1,0 @@
-mvn install:install-file -Dfile=com.lemoineat.pulse.reports.extensions_1.1.0.jar -DpomFile=pulse.report.extensions-1.1.0.xml

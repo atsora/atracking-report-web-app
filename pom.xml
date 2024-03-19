@@ -3,25 +3,25 @@
 	<modelVersion>4.0.0</modelVersion>
 
   
-	<groupId>com.lemoinetechnologies</groupId>
-	<artifactId>pulse.report</artifactId>
+	<groupId>eu.atsora</groupId>
+	<artifactId>atracking.report</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
   
-	<name>Pomamo Reporting Global</name>
-  <description>All Pomamo Reporting Modules</description>
-	<url>https://github.com/lemoineat</url>
-  <inceptionYear>2019</inceptionYear>
+	<name>Atracking Reporting Global</name>
+  <description>All Atsora Tracking Reporting Modules</description>
+	<url>https://github.com/atsora</url>
+  <inceptionYear>2023</inceptionYear>
   <organization>
-		<name>Lemoine Automation Technologies</name>
+		<name>Atsora Solutions</name>
 	</organization>
 	
 
 	<modules>
-		<module>pulse.report.functions</module>
-		<module>pulsereportsextensions</module>
-		<module>pulse.reporting</module>
+		<module>atracking.report.functions</module>
+		<module>atrackingreportsextensions</module>
+		<module>atrackingreporting</module>
 	</modules>
   
   

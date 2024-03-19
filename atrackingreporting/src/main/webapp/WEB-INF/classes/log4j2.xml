@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+  <Appenders>
+    <Console name="consoleAp" target="SYSTEM_OUT">
+      <ThresholdFilter level="warn" />
+      <PatternLayout pattern="%d [%t] %p %c %x: %m (%F:%L)%n" />
+    </Console>
+  
+    <RollingFile name="debugAp" fileName="${log4j.file.prefix}atracking.reporting.debug"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.debug.gz" 
+     append="true">
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="5" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+    <RollingFile name="infoAp" fileName="${log4j.file.prefix}atracking.reporting.info"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.info.gz" 
+     append="true">
+      <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="5" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+    <RollingFile name="warnAp" fileName="${log4j.file.prefix}atracking.reporting.warn"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.warn.gz" 
+     append="true">
+      <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="5" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+    <RollingFile name="errorAp" fileName="${log4j.file.prefix}atracking.reporting.error"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.error.gz" 
+     append="true">
+      <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="5" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+    <RollingFile name="eclipseAp" fileName="${log4j.file.prefix}atracking.eclipse.debug"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.eclipse.debug.gz" 
+     append="true">
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="10" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+    <RollingFile name="otherAp" fileName="${log4j.file.prefix}atracking.reporting.other.debug"
+     filePattern="${log4j.file.prefix}atracking.reporting-%i.other.debug.gz" 
+     append="true">
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="10" />
+      <PatternLayout>
+        <pattern>%d [%t] %p %c %x: %m (%F:%L)%n</pattern>
+      </PatternLayout>
+    </RollingFile>
+
+  </Appenders>
+
+  <Loggers>
+
+    <Root level="warn">
+      <AppenderRef ref="consoleAp" />
+      <AppenderRef ref="debugAp" />
+      <AppenderRef ref="infoAp" />
+      <AppenderRef ref="warnAp" />
+      <AppenderRef ref="errorAp" />
+    </Root>
+
+    <Logger name="eu.atsora.tracking.reporting" level="warn">
+    </Logger>
+  
+    <Logger name="eu.atsora.tracking.reporting.servlet.MyDispatcherServlet" level="warn">
+    </Logger>
+  
+    <Logger name="org.springframework" level="warn">
+    </Logger>
+   
+    <Logger name="org" level="warn">
+      <AppenderRef ref="otherAp" />
+    </Logger>
+  
+    <!-- To de-activate the warning messages on the CSS -->
+    <Logger name="org.eclipse.birt.report.model" level="error">
+    </Logger>
+    
+    <Logger name="org.eclipse.birt" level="warn">
+      <AppenderRef ref="eclipseAp" />
+    </Logger>
+  
+  </Loggers>
+ 
+</Configuration>

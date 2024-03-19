@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=target/atracking.report.extensions-1.0.jar -DpomFile=plugins/atracking.report.extensions-1.1.0.xml

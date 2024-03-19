@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/pulsereporting${atrackingreporting.version.suffix}">
+  <Resource
+    name="jdbc/atsora"
+    auth="Container"
+    driverClassName="org.postgresql.Driver"
+    maxActive="40"
+    maxIdle="-1"
+    maxWait="-1"
+    type="javax.sql.DataSource"
+    url="jdbc:postgresql://databaseserver/DatabaseName?autoReconnect=true"
+    validationQuery="select 1"
+    testOnBorrow="true"
+    username="reportV2"
+    password="DatabasePassword"/>
+</Context>
