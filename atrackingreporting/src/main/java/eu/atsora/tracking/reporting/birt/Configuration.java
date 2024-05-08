@@ -215,7 +215,7 @@ public final class Configuration {
     PREFIX_SUB_DOC_FOLDER = (value == null) ? "PWR_DOC" : value;
 
     value = properties.getProperty("WEB_SERVICE_PATH");
-    WEB_SERVICE_PATH = (value == null) ? "http://lctr:8081/" : value;
+    WEB_SERVICE_PATH = (value == null) ? "http://lctr:5000/" : value;
     if (!WEB_SERVICE_PATH.endsWith("/"))
       WEB_SERVICE_PATH += "/";
 

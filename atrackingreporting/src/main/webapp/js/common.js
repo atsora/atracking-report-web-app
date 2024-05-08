@@ -254,7 +254,7 @@ var webServiceManager = {
     //this._path = path + "/";
     if (timeout != '' && !isNaN(timeout))
       this._timeout = parseInt(timeout);
-    //this._path = location.protocol + "//serveraddress:8081/"; // for DEBUG purposes only
+    //this._path = location.protocol + "//serveraddress:5000/"; // for DEBUG purposes only
 
     // Test the connection with the function returning "LoginRequired" - NOT Anymore !
   },
@@ -281,7 +281,7 @@ var webServiceManager = {
       }
     }
     if (path == '') {
-      path = 'http://serveraddress:8081/'; // Default
+      path = 'http://serveraddress:5000/'; // Default
     }
     var url = path //this._path 
       + "Time/" + (isPast ? "PastRange" : "CurrentRange") + "/" + number + "_" + unit;
