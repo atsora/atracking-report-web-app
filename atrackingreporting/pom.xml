@@ -57,8 +57,8 @@
     <profile>
       <id>release</id>
       <properties>
-        <birt.design.folder>../../../l_ctr/pfrdata/report_templates</birt.design.folder>
-        <birt.resource.path>../../../l_ctr/pfrdata/report_templates</birt.resource.path>
+        <birt.design.folder>C:/Program\ Files/AtsoraTracking\ Reports</birt.design.folder>
+        <birt.resource.path>C:/Program\ Files/AtsoraTracking\ Reports</birt.resource.path>
         <atrackingreporting.version.suffix/>
         <log4j.file.prefix>${log4j:configParentLocation}/../../logs/</log4j.file.prefix>
       </properties>
@@ -118,7 +118,7 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-jsp-api</artifactId>
-      <version>9.0.14</version>
+      <version>9.0.65</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
     <!-- OLD <groupId>org.hibernate</groupId> <artifactId>hibernate</artifactId> -->
