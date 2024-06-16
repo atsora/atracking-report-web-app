@@ -36,7 +36,7 @@ input[type="text"]:disabled, input[type="number"]:disabled, select:disabled {
   color: #DFDFDF;
 }
 #header-logo {
-  background-image: url('../images/Ltech-dark.svg');
+  background-image: url('../images/atsora.svg');
 }
 .title {
   color: rgba(255, 255, 255, 0.8); /* Same as header - Mandatory */
