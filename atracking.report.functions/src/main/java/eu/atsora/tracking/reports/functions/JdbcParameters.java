@@ -163,7 +163,7 @@ public class JdbcParameters {
 	}
 
 	public static String getLemoineGDBUrlFromDbConnectionKey() {
-		String dbConnectionValue = getRegStringValue("\"HKLM\\SOFTWARE\\Lemoine\\PULSE\"", "DbConnection.Atsora");
+		String dbConnectionValue = getRegStringValue("\"HKLM\\SOFTWARE\\Atsora\\Tracking\"", "DbConnection.Atsora");
 		if (null == dbConnectionValue) {
 			return null;
 		}
