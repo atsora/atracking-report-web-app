@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Atsora Tracking Reports Extensions Plug-in
-Bundle-SymbolicName: eu.atsora.tracking.reports.extensions;singleton:=true
+Bundle-SymbolicName: eu.atsora.tracking.report.extensions;singleton:=true
 Bundle-Version: 1.1.0
 Bundle-Vendor: Atsora Solutions
 Require-Bundle: org.eclipse.birt.data.aggregation;bundle-version="4.2.0",

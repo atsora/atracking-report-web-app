@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0
 
-package eu.atsora.tracking.reports.extensions;
+package eu.atsora.tracking.report.extensions;
 
 import org.eclipse.birt.core.data.DataType;
 import org.eclipse.birt.data.aggregation.impl.AggrFunction;
@@ -12,15 +12,16 @@ import org.eclipse.birt.data.aggregation.impl.SupportedDataTypes;
 import org.eclipse.birt.data.engine.api.aggregation.Accumulator;
 import org.eclipse.birt.data.engine.api.aggregation.IParameterDefn;
 
-public class LinearRegressionIntersection extends AggrFunction {
+
+public class LinearRegression extends AggrFunction {
 
 	private static final int NUMBER_OF_PASSES = 2;
 
 	public String getName() {
-		return "LINEARREGINTERSECT";
+		return "LINEARREG";
 	}
 
-	public  IParameterDefn[] getParameterDefn() {
+	public IParameterDefn[] getParameterDefn() {
 		// three parameters
 		//return new boolean[] { true, true, true };
 		return new IParameterDefn[] {new ParameterDefn("a","a",false,true,SupportedDataTypes.CALCULATABLE,"First parameter") , new ParameterDefn("b","b",false,true,SupportedDataTypes.CALCULATABLE,"Second parameter"), new ParameterDefn("c","c",false,true,SupportedDataTypes.CALCULATABLE,"Third parameter")};
@@ -31,7 +32,7 @@ public class LinearRegressionIntersection extends AggrFunction {
 	}
 
 	public Accumulator newAccumulator() {
-		return new LinearRegressionIntersectionAccumulator();
+		return new LinearRegressionAccumulator();
 	}
 
 	public int getNumberOfPasses() {
@@ -39,14 +40,15 @@ public class LinearRegressionIntersection extends AggrFunction {
 	}
 
   public int getDataType() {
-		return DataType.DOUBLE_TYPE;
+	  return DataType.DOUBLE_TYPE;
   }
 
+
   public String getDescription() {
-	  return "LinearRegressionIntersection";
+	  return "LinearRegression";
   }
 
   public String getDisplayName() {
-	  return "LinearRegressionIntersection";
+	  return "LinearRegression";
   }
 }

@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0
 
-package eu.atsora.tracking.reports.extensions;
+package eu.atsora.tracking.report.extensions;
 
 import org.eclipse.birt.core.data.DataType;
 import org.eclipse.birt.data.aggregation.impl.AggrFunction;

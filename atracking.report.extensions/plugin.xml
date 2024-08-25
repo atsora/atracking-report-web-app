@@ -2,11 +2,11 @@
 <?eclipse version="3.2"?>
 <plugin>
    <extension
-         id="eu.atsora.tracking.reports.extensions"
+         id="eu.atsora.tracking.report.extensions"
          name="TotalPlus"
          point="org.eclipse.birt.data.aggregation">
       <Aggregations>
-				<AggregationFactory class="eu.atsora.tracking.reports.extensions.PulseReportAggregationFactory"/>
+				<AggregationFactory class="eu.atsora.tracking.report.extensions.PulseReportAggregationFactory"/>
       </Aggregations>
    </extension>
 

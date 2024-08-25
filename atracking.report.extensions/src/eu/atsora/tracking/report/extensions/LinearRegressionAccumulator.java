@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0
 
-package eu.atsora.tracking.reports.extensions;
+package eu.atsora.tracking.report.extensions;
 
 import java.sql.Date;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import java.util.Map;
 import org.eclipse.birt.data.engine.api.aggregation.Accumulator;
 import org.eclipse.birt.data.engine.core.DataException;
 
-public class LinearRegressionSlopeAccumulator extends Accumulator {
+public class LinearRegressionAccumulator extends Accumulator {
 
 	private int passNo = 0;
 	private Map<Object, Double> sumx;
@@ -68,6 +68,13 @@ public class LinearRegressionSlopeAccumulator extends Accumulator {
 		// Second parameter: date
 		// Third parameter: aggregate value
 
+		Double xvalue;
+		if (arg0[1] instanceof Date) {
+			xvalue = new Double(((Date) arg0[1]).getTime());
+		} else {
+			xvalue = (Double) arg0[1];
+		}
+		
 		Object group = null;
 		if (arg0.length == 2) {
 			group = null;
@@ -76,16 +83,9 @@ public class LinearRegressionSlopeAccumulator extends Accumulator {
 		} else {
 			// TODO
 		}
-
+		
 		if (passNo == 1) {
-			Double xvalue;
 			Double yvalue = (Double) arg0[0];
-
-			if (arg0[1] instanceof Date) {
-				xvalue = new Double(((Date) arg0[1]).getTime());
-			} else {
-				xvalue = (Double) arg0[1];
-			}
 
 			if (sumx.get(group) != null) {
 				sumx.put(group, sumx.get(group) + xvalue);
@@ -117,10 +117,19 @@ public class LinearRegressionSlopeAccumulator extends Accumulator {
 				count.put(group, 1);
 			}
 		} else if (passNo == 2) {
-			this.value = new Double((sumxy.get(group) - sumx.get(group)
+			double intersection = sumy.get(group)
+			/ count.get(group)
+			- sumx.get(group)
+			/ count.get(group)
+			* (sumxy.get(group) - sumx.get(group) * sumy.get(group)
+					/ count.get(group))
+			/ (sumxx.get(group) - sumx.get(group) * sumx.get(group)
+					/ count.get(group));
+			double slope = (sumxy.get(group) - sumx.get(group)
 					* sumy.get(group) / count.get(group))
 					/ (sumxx.get(group) - sumx.get(group) * sumx.get(group)
-							/ count.get(group)));
+							/ count.get(group));
+			this.value = new Double (intersection + slope * xvalue);
 		} else {
 			// TODO error
 		}

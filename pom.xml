@@ -20,7 +20,7 @@
 
 	<modules>
 		<module>atracking.report.functions</module>
-		<module>atrackingreportsextensions</module>
+		<module>atracking.report.extensions</module>
 		<module>atrackingreporting</module>
 	</modules>
   
