@@ -19525,7 +19525,7 @@ var pulseCustomDialog = function () {
 
   /*
   * Open an info dialog.
-  * It could be $.prompt BUT this one use Pomamo design.
+  * It could be $.prompt BUT this one use design.
   * message: message inside the window
   * title: title of the window
   * onClose: callback when the window is closed (ok or cancel)
