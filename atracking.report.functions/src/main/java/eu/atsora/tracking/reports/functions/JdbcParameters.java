@@ -174,12 +174,13 @@ public class JdbcParameters {
 			String user = m.group(2);
 			String password = m.group(4);
 			String jdbcUrl = "jdbc:postgresql://" + hostPortDatabase;
-			if (null != user) {
-				jdbcUrl += "?user=" + user;
-				if (null != password) {
-					jdbcUrl += "&password=" + password;
-				}
-			}
+      // Note: keep reportv2 as user
+//			if (null != user) {
+//				jdbcUrl += "?user=" + user;
+//				if (null != password) {
+//					jdbcUrl += "&password=" + password;
+//				}
+//			}
 			return jdbcUrl;
 		}
 		else {
