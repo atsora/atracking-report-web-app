@@ -4,12 +4,12 @@
 	
   
   <groupId>eu.atsora</groupId>
-	<artifactId>atracking.report.extensions</artifactId>
-	<version>1.1.1</version>
+	<artifactId>pulse.report.extensions</artifactId>
+	<version>1.1.0</version>
 	<packaging>pom</packaging>
 	
   
-  <name>Atsora Tracking Report Extensions</name>
+  <name>Atsora Pulse Report Extensions</name>
 	<description>Extensions for Atsora Tracking Reports</description>
   <url>https://github.com/atsora</url>
 	<inceptionYear>2024</inceptionYear>
@@ -26,30 +26,6 @@
   <build>
 		<plugins>
 			<plugin>
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
-        <configuration>
-          <!-- TODO: bug, wrong compilation, missing plugin specific files -->
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-						</manifest>
-					</archive>
-        </configuration>
-				<executions>
-          <execution>
-            <id>default-jar</id>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-			</plugin>
-			
-			<plugin>
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-install-plugin</artifactId>
@@ -62,17 +38,16 @@
 							<goal>install-file</goal>
 						</goals>
 						<configuration>
-							<file>target/atracking.report.extensions-1.1.1.jar</file>
+							<file>pulse.report.extensions-1.1.0.jar</file>
 							<groupId>eu.atsora</groupId>
-							<artifactId>atracking.report.extensions</artifactId>
-							<version>1.1.1</version>
+							<artifactId>pulse.report.extensions</artifactId>
+							<version>1.1.0</version>
 							<packaging>jar</packaging>
-							<pomFile>plugins/eu.atsora.atracking.report.extensions-1.1.1.xml</pomFile>
+							<pomFile>plugins/eu.atsora.pulse.report.extensions-1.1.0.xml</pomFile>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
   

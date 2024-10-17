@@ -4,7 +4,7 @@
 	xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.atsora</groupId>
-	<artifactId>eu.atsora.tracking.report.extensions</artifactId>
-	<version>1.1.0</version>
+	<artifactId>atracking.report.extensions</artifactId>
+	<version>1.1.1</version>
 	<packaging>jar</packaging>
 </project>

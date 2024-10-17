@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Atsora Tracking Reports Extensions Plug-in
 Bundle-RequiredExecutionEnvironment: JavaSE-20
-Bundle-SymbolicName: eu.atsora.atracking.report.extensions;singleton:=true
+Bundle-SymbolicName: eu.atsora.tracking.report.extensions;singleton:=true
 Bundle-Version: 1.1.1
 Bundle-Vendor: Atsora Solutions
 Require-Bundle: org.eclipse.birt.data.aggregation;bundle-version="4.2.0",

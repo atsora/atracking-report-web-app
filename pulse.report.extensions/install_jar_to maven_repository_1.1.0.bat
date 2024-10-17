@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=pulse.report.extensions-1.1.0.jar -DpomFile=plugins/eu.atsora.pulse.report.extensions-1.1.0.xml

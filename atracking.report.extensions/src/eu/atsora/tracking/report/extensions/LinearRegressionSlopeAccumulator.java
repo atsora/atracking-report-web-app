@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: EPL-2.0
 
-package eu.atsora.tracking.report.extensions;
+package eu.atsora.atracking.report.extensions;
 
 import java.sql.Date;
 import java.util.HashMap;

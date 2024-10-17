@@ -5,14 +5,14 @@
 
   <groupId>eu.atsora</groupId>
   <artifactId>atracking.reporting</artifactId>
-  <version>12.0.1.0</version>
+  <version>16.0.0.0</version>
   <packaging>war</packaging>
 
 
   <name>Atracking Reporting Web Application</name>
   <description>Web application for the reports</description>
   <url>https://atsora.eu/</url>
-  <inceptionYear>2023</inceptionYear>
+  <inceptionYear>2024</inceptionYear>
   <organization>
     <name>Atsora Solutions</name>
   </organization>
@@ -210,10 +210,16 @@
       <version>1.5</version>
       <scope>runtime</scope>
     </dependency>
-    <!-- Atsora dpendencies atracking reporting extensions -->
+    <!-- Atsora dependencies atracking reporting extensions -->
     <dependency>
       <groupId>eu.atsora</groupId>
       <artifactId>atracking.report.extensions</artifactId>
+      <version>1.1.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>eu.atsora</groupId>
+      <artifactId>pulse.report.extensions</artifactId>
       <version>1.1.0</version>
       <scope>runtime</scope>
     </dependency>

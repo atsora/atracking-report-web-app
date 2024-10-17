@@ -1,1 +1,0 @@
-mvn install:install-file -Dfile=target/eu.atsora.tracking.report.extensions-1.1.0.jar -DpomFile=plugins/eu.atsora.tracking.report.extensions-1.1.0.xml
