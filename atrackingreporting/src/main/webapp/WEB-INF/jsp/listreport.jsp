@@ -44,7 +44,7 @@
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery/chosen.jquery.js"></script>
   
   <script type="text/javascript"
-    src="<%=request.getContextPath()%>/js/config_pulsecomponent_default.js?v=${f:getAutoVersioningSuffix()}"></script>
+    src="<%=request.getContextPath()%>/js/config_component_default.js?v=${f:getAutoVersioningSuffix()}"></script>
   <script type="text/javascript"
     src="<%=request.getContextPath()%>/js/config_reportwebapp.js?v=${f:getAutoVersioningSuffix()}"></script>
   <script type="text/javascript"
@@ -52,7 +52,7 @@
   <script type="text/javascript"
     src="<%=request.getContextPath()%>/js/config_custom.js?v=${f:getAutoVersioningSuffix()}"></script>
   <script type="text/javascript"
-    src="<%=request.getContextPath()%>/js/translation_pulsecomponent_default.js?v=${f:getAutoVersioningSuffix()}"></script>
+    src="<%=request.getContextPath()%>/js/translation_component_default.js?v=${f:getAutoVersioningSuffix()}"></script>
   <script type="text/javascript"
     src="<%=request.getContextPath()%>/js/pulse.exports.light.js?v=${f:getAutoVersioningSuffix()}"></script>
   <script type="text/javascript"
