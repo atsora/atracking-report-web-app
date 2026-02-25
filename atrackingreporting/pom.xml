@@ -5,14 +5,14 @@
 
   <groupId>eu.atsora</groupId>
   <artifactId>atracking.reporting</artifactId>
-  <version>16.0.0.0</version>
+  <version>17.0.0.0</version>
   <packaging>war</packaging>
 
 
   <name>Atracking Reporting Web Application</name>
   <description>Web application for the reports</description>
   <url>https://atsora.eu/</url>
-  <inceptionYear>2024</inceptionYear>
+  <inceptionYear>2026</inceptionYear>
   <organization>
     <name>Atsora Solutions</name>
   </organization>
