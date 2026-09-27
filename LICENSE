@@ -21,9 +21,10 @@ Some external frameworks have a specific license:
 
 Some images have a specific license
 
-- validate.png : https://www.iconfinder.com/icons/326572/check_icon#size=24
-  Licence: MIT, Free for commercial use
-  Author: Google(http://www.google.com/design/ https://m3.material.io)
+- validate.png : https://github.com/google/material-design-icons/blob/master/symbols/web/check/materialsymbolsoutlined/check_24px.svg
+  License: Apache License 2.0
+  Author: Google / Material Symbols
+  The PNG is an enlarged and slightly thickened 24 px raster adaptation of the official `check` SVG.
 
 - warning.png : https://www.iconfinder.com/icons/173946/warning_icon#size=32
   Licence:  Free for commercial use
