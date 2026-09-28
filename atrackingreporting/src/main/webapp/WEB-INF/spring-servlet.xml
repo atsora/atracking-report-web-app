@@ -40,9 +40,8 @@
 	</bean>
 
 	<!-- Declare the Resolver -->
-	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
-		<property name="defaultLocale" value="en" />
-	</bean>
+	<!-- Default locale: BIRT_LOCALE in atrackingreporting.properties -->
+	<bean id="localeResolver" class="eu.atsora.tracking.reporting.servlet.ConfigurationLocaleResolver" />
 
 	<!-- Declare the Interceptor -->
 	<mvc:interceptors>
