@@ -49,10 +49,10 @@ var PULSE_COMPONENT_TRANSLATION = {
     noDataTooOld: '-', // N/A'
   },
   detailsViewSubTitles: {
-    reason: 'motion status',
+    reason: 'reason',
     machinemode: 'machine mode',
     machinestatetemplate: 'scheduled status',
-    observationstate: 'machine state',
+    observationstate: 'planned state',
     operationcycle: 'cycle',
     productionstate: 'production state',
     shift: 'shift',
@@ -67,10 +67,10 @@ var PULSE_COMPONENT_TRANSLATION = {
     scheduledStatus: 'Scheduled status:'
   },
   lastmachinestatus: {
-    reason: 'Currrent motion status: ',
-    pastReasonData: 'Past motion status details',
-    currentTooltip: 'Change current motion status',
-    pastTooltip: 'Look or change past motion status'
+    reason: 'Current reason: ',
+    pastReasonData: 'Past reason details',
+    currentTooltip: 'Change current reason',
+    pastTooltip: 'Look at or change past reasons'
   },
   lastserialnumber: {
     currentserialnumber: 'Serial Number: ',
